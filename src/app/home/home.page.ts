@@ -65,7 +65,7 @@ export class HomePage implements OnInit {
 	// base on the name of the file
 	async loadFileData(fileNames) {
 		for (let f of fileNames) {
-			const filePath = `${IMAGE_DIR}/${f}`;
+			const filePath = `${IMAGE_DIR}/${f.name}`;
 
 			const readFile = await Filesystem.readFile({
 				path: filePath,
